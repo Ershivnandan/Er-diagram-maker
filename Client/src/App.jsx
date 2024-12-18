@@ -1,13 +1,14 @@
-
-import './App.css'
+import "./App.css";
+import Navbar from "./components/Navbar";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
-
   return (
-   <>
-      <h1 className='text-red-500 font-extrabold text-3xl text-center'>hello shiv</h1>
-   </>
-  )
+    <div className="bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
+      <Navbar />
+      <AllRoutes />
+    </div>
+  );
 }
 
-export default App
+export default App;
