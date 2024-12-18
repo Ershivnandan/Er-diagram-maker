@@ -104,9 +104,9 @@ const DiagramDetails = () => {
             <BsFillPlusCircleFill className="inline-block mr-2" />
             Add Table Node
           </button>
-          <div className="space-y-4 mt-4">
+          <div className="space-y-4 mt-4 text-base">
             {schema.nodes.map((node) => (
-              <div key={node.id} className="p-2 border-b border-gray-300">
+              <div key={node.id} className="p-2 border rounded-lg border-gray-300 ">
                 {/* Table Name */}
                 {editingTable === node.id ? (
                   <div className="flex gap-2 items-center w-full">
@@ -138,7 +138,7 @@ const DiagramDetails = () => {
                 )}
 
                 {/* Columns */}
-                <ul className="mt-2">
+                <ul className="mt-2 text-sm">
                   {node.data.ports.map((port) => (
                     <li key={port.id} className="flex items-center justify-between">
                       {editingColumn === port.id ? (
@@ -171,7 +171,7 @@ const DiagramDetails = () => {
                 </ul>
                 <button
                   onClick={() => addPortToNode(node.id)}
-                  className="mt-2 px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-xs"
+                  className="mt-2 px-2 py-1 border dark:border-white border-black w-full text-white rounded hover:bg-gray-600 text-xs"
                 >
                   Add Column
                 </button>
@@ -183,8 +183,8 @@ const DiagramDetails = () => {
 
       {/* Diagram */}
       <div className="flex-1 flex flex-col">
-        <div className="w-full h-full p-4 bg-gray-300 dark:bg-gray-900">
-          <Diagram schema={schema} onChange={onChange} />
+        <div className="w-full h-full p-4 bg-gray-900 dark:bg-gray-900">
+          <Diagram  schema={schema} onChange={onChange} />
         </div>
       </div>
     </div>

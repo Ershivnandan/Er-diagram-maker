@@ -62,7 +62,7 @@ const Navbar = () => {
                   <span>{user.name}</span>
                 </button>
                 {isProfileMenuOpen && (
-                  <ul className="absolute right-0 mt-2 w-48 bg-gray-700 shadow-lg rounded-md text-sm">
+                  <ul className="absolute z-40 right-0 flex flex-col justify-center items-center mt-2 w-48 bg-gray-700 shadow-lg rounded-md text-sm">
                     <li>
                       <ThemeSwitch/>
                     </li>
