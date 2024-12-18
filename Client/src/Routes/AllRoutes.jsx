@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import PrivateRoute from "../utils/PrivateRoute";
-import Dashboard from "../Pages/Dashboard";
-import Landing from "../Pages/Landing";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Landing from "../Pages/Landing/Landing";
 import Login from "../Pages/Auth/Login";
 import Signup from "../Pages/Auth/Signup";
+import DiagramDetails from "../Pages/DiagramDetail/DiagramDetails";
 
 const AllRoutes = () => {
 
@@ -22,6 +23,14 @@ const AllRoutes = () => {
           element={
             <PrivateRoute>
               <Dashboard />
+            </PrivateRoute>
+          }
+        />
+       <Route
+          path="/project/:id"
+          element={
+            <PrivateRoute>
+              <DiagramDetails />
             </PrivateRoute>
           }
         />

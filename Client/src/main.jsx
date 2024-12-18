@@ -5,9 +5,10 @@ import App from "./App.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { BrowserRouter } from "react-router-dom";
+import 'beautiful-react-diagrams/styles.css';
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  // <StrictMode>
     <AuthProvider>
       <ThemeProvider>
         <BrowserRouter>
@@ -15,5 +16,5 @@ createRoot(document.getElementById("root")).render(
         </BrowserRouter>
       </ThemeProvider>
     </AuthProvider>
-  </StrictMode>
+  // </StrictMode>
 );
