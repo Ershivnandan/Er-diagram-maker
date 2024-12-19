@@ -1,10 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaHome, FaInfoCircle, FaSignInAlt, FaUser, FaCog, FaPowerOff } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaInfoCircle,
+  FaSignInAlt,
+  FaUser,
+  FaCog,
+  FaPowerOff,
+} from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 import ThemeSwitch from "./ThemeSwitch";
-
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -55,7 +63,10 @@ const Navbar = () => {
                   className="flex items-center space-x-2 focus:outline-none hover:text-gray-300"
                 >
                   <img
-                    src={user.profileImage || "/placeholder.png"}
+                    src={
+                      user.profileImage ||
+                      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                    }
                     alt="Profile"
                     className="w-8 h-8 rounded-full"
                   />
@@ -64,7 +75,7 @@ const Navbar = () => {
                 {isProfileMenuOpen && (
                   <ul className="absolute z-40 right-0 flex flex-col justify-center items-center mt-2 w-48 bg-gray-700 shadow-lg rounded-md text-sm">
                     <li>
-                      <ThemeSwitch/>
+                      <ThemeSwitch />
                     </li>
                     <li>
                       <button
@@ -78,7 +89,9 @@ const Navbar = () => {
                 )}
               </div>
             </li>
-          ) : <ThemeSwitch/>}
+          ) : (
+            <ThemeSwitch />
+          )}
         </ul>
 
         {/* Mobile Toggle */}
@@ -121,7 +134,7 @@ const Navbar = () => {
                 {isProfileMenuOpen && (
                   <ul className="absolute right-0 mt-2 w-48 bg-gray-700 shadow-lg rounded-md text-sm">
                     <li>
-                    <ThemeSwitch/>
+                      <ThemeSwitch />
                     </li>
                     <li>
                       <button
